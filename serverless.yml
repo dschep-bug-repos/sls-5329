@@ -46,11 +46,12 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
+package:
 #  include:
 #    - include-me.js
 #    - include-me-dir/**
-#  exclude:
+  exclude:
+    - '**/*'
 #    - exclude-me.js
 #    - exclude-me-dir/**
 
@@ -58,8 +59,6 @@ functions:
   hello:
     handler: handler.hello
     package:
-      exclude:
-        - '**/*'
       include:
         - handler.js
 
